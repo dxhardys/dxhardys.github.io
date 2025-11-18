@@ -1,0 +1,75 @@
+site_name: "Serre connecté"
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: "deep purple"
+      accent: red
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: "deep purple"
+      accent: red
+  features:
+    - navigation.path
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.expand
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+
+    - header.autohide
+
+    - toc.integrate
+
+    - content.code.annotate
+    - content.tabs.link
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - attr_list
+  - toc:
+      permalink: true
+      toc_depth: 0
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Reporting:
+      - Sofiane:
+          - Semaine 1 - Prise en main: sofiane/week1.md
+          - Semaine 2 - Modelisation: sofiane/week2.md
+
+      - Ishak:
+          - Semaine 1 - Prise en main: ishak/week1.md
+          - Semaine 2 - Developpement: ishak/week2.md
+
+extra_css:
+  - stylesheets/extra.css
