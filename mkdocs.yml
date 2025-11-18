@@ -60,13 +60,17 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
 nav:
   - Home: index.md
   - Reporting:
       - Sofiane:
           - Semaine 1 - Prise en main: sofiane/week1.md
           - Semaine 2 - Modelisation: sofiane/week2.md
-
       - Ishak:
           - Semaine 1 - Prise en main: ishak/week1.md
           - Semaine 2 - Developpement: ishak/week2.md
