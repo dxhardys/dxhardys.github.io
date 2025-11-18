@@ -74,9 +74,11 @@ nav:
       - Ishak:
           - Semaine 1 - Prise en main: ishak/week1.md
           - Semaine 2 - Developpement: ishak/week2.md
+  - Annex:
+      - Convention: annex/convention.md
 
 extra_css:
   - stylesheets/extra.css
 
-
-  copyright: CC BY-NC 4.0; 2025 - Sofiane Arhab, Ishak Bougheraba, Zineddine Ladjadj
+extra:
+  copyright: "CC BY-NC 4.0 ; 2025 - Sofiane Arhab, Ishak Bougheraba, Zineddine Ladjadj"
