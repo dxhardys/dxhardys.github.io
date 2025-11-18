@@ -34,7 +34,7 @@ L'écran qu'on utiliseras trés probablement pour afficher certaines information
 
 
 <figure style="text-align: center;">
-  <img src="images/lcd_screen.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/lcd_screen.jpeg"  width="800">
   <figcaption> Ecran LCD 128x64 - 12864B - avec echelle</figcaption>
 </figure>
 
@@ -43,7 +43,7 @@ Afin de tester l'écran nous utiliserons le schéma de cablage suivant :
 
 
 <figure style="text-align: center;">
-  <img src="images/fritzing_lcd_screen_test.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/fritzing_lcd_screen_test.jpeg"  width="800">
   <figcaption> Schéma Cablâge de test Ecran - Fritzing</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ Pour la partie code on fera en sorte d'importer la labrairie `U8glib.h` via l'ou
 
 
 <figure style="text-align: center;">
-  <img src="images/arduino_ide_import_lib.jpeg" alt="Descriptive text" width="300">
+  <img src="/sofiane/images/arduino_ide_import_lib.jpeg"  width="300">
   <figcaption> Importer une Librairie sur ArduinoIDE</figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ void loop(void) {
 Voici le résultat à l'écran, la luminosité laisse à désirer pour le moment mais la datasheet indique cue c'est contrôlable, pour le moment nous avons la confirmation que l'écran fonctionne.
 
 <figure style="text-align: center;">
-  <img src="images/lcd_screen_success_test.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/lcd_screen_success_test.jpeg"  width="800">
   <figcaption> Affichage du message "Hello World!" - Luminosité médiocre</figcaption>
 </figure>
 
@@ -97,14 +97,14 @@ Par la suite on passe à l'utilisation du capteur d'Humidité qui nous serviras 
 
 
 <figure style="text-align: center;">
-  <img src="images/water_level_sensor.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/water_level_sensor.jpeg"  width="800">
   <figcaption> Capteur d'eau - SE045</figcaption>
 </figure>
 
 Pour le tester on se baseras sur le schémas de cablâge suivant :
 
 <figure style="text-align: center;">
-  <img src="images/fritzing_water_level_sensor_test.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/fritzing_water_level_sensor_test.jpeg"  width="800">
   <figcaption> Schéma de câblage de test du capteur d'eau - Fritzing</figcaption>
 </figure>
 

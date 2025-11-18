@@ -6,7 +6,7 @@ date: \today
 theme: metropolis
 colortheme: orchid
 fonttheme: structurebold
-toc: true
+toc: true 
 toc-depth: 2
 slide-level: 2
 header-includes:
@@ -20,7 +20,7 @@ Conception d'un petit légo pour comprendre la création de volume l'extrudation
 En suivant la formation on arrive au résultat suivant 
 
 <figure style="text-align: center;">
-  <img src="images/fusion360_test_cube.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/fusion360_test_cube.jpeg"  width="800">
   <figcaption> Fusion360 - Conception et moélisation d'un LEGO - Formation Selena PERE</figcaption>
 </figure>
 
@@ -29,14 +29,14 @@ Qu'on exporteras au format `.stl` puis sur PrusaSlicer on importe ce fichier
 
 
 <figure style="text-align: center;">
-  <img src="images/prusa_test_cube.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/prusa_test_cube.jpeg"  width="800">
   <figcaption> PrusaSlicer - Importation du fichier f360 de sortie de fusion360</figcaption>
 </figure>
 
 Par la suite on sélectionne le bon filament en fonction de la bobine monté sur l'imprimante ici du Prusa PETG de couleur orange, on sélectionne le bon modèle d'imprimmante MK4S et le diamètre de la buse par défaut 0.4mm puis on exporte ça en gcode qui est un format lu reconnu par l'imprimmante qui contient les instructions d'impression :
 
 <figure style="text-align: center;">
-  <img src="images/cube_printing.jpeg" alt="Descriptive text" width="400">
+  <img src="/sofiane/images/cube_printing.jpeg"  width="400">
   <figcaption> Impression en cours sur Prusa MK4S - PETG - 0.4mm</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ L'impression poursuit son cours convenablement et le résultat et le suivant
 
 
 <figure style="text-align: center;">
-  <img src="images/cube_printed.jpeg" alt="Descriptive text" width="200">
+  <img src="/sofiane/images/cube_printed.jpeg"  width="200">
   <figcaption> Résultat Impression cube test</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ Et on retrouve le rapport d'impression sur l'écran de l'imprimmante :
 
 
 <figure style="text-align: center;">
-  <img src="images/printing_report_cube_test.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/printing_report_cube_test.jpeg"  width="800">
   <figcaption> Rapport d'impression sur Prusa MKS4</figcaption>
 </figure>
 
@@ -63,7 +63,7 @@ qui nous retourne notamment le temps d'impression (Temps de chauffage + calibrat
 
 
 <figure style="text-align: center;">
-  <img src="images/temperature_sensor.jpeg" alt="Descriptive text" width="400">
+  <img src="/sofiane/images/temperature_sensor.jpeg"  width="400">
   <figcaption> Capteur temperature TMP235 - avec echelle  </figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ Ce capteur est trés basique on peut retrouver sa datasheet [ici](https://mm.dig
 
 
 <figure style="text-align: center;">
-  <img src="images/fritzing_temperature_sensor_test.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/fritzing_temperature_sensor_test.jpeg"  width="800">
   <figcaption> Schéma de câblage de test capteur de temperature - Fritzing </figcaption>
 </figure>
 
@@ -105,9 +105,9 @@ void loop() {
 
 Ce test permet de conclure que le capteur est fonctionnel et qu'il mesure correctement la temperature ambiante du Fablab ~22° et en rapprochant simplement le capteur de la baie d'aération de ma mahcine fait grimper la temperature.
 
-
-
 <figure style="text-align: center;">
-  <img src="images/output_temperature_test_code.jpeg" alt="Descriptive text" width="800">
+  <img src="/sofiane/images/output_temperature_test_code.jpeg"  width="800">
   <figcaption> Sortie serial evolution de la temperature </figcaption>
 </figure>
+
+## Modélisation 
