@@ -29,7 +29,7 @@ Pour pouvoir contribuer au reporting sur windows on se baseras sur l'intégratio
 Sur `VSCode` tapez `Ctrl + Shift + P` pour ouvrir l'invite de commande puis entrez `git clone <repo-url>`, `<repo-url>` correspond à l'URL https du repository, voir la figure ci-dessous :
 
 <figure style="text-align: center;">
-  <img src="/docs/annex/images/repository_clone.png"  width="400">
+  <img src="/annex/images/repository_clone.md"  width="400">
   <figcaption> Cloner un dépot GitHub</figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ git config --global user.email "<l'eamil associé à votre compte github>"
 Une fois le repository cloner vous pouvez commencez à modifier les différent fichiers au format `Markdown` naviguez vers le fichier `week` correspondant et commencez à le modifier, vous verrez apparaitres les marques vertes sur les indices de lignes, ces marques verte correspondent à vos modification en cours que vous n'avez pas encore commité, pour valider vos modification et que celle-cis soit visible sur `GitHub Pages` naviguez vers le manu lateral `Version Control` et cliquer sur le `+` correspondant au fichier que vous venez de modifier, celui-ci a été ajouté dans les `Staged Changes` si vous avez terminer toute les modification que vous souhaitiez faire durant votre session de reporting (notez que vous ajouter plusieurs fichiers à la fois, il est également necessaire d'ajouter les images que vous uploader de la même manière) cliquez sur le menu déroulant et choisissez `Commit & Push` l'action de commit regroupe toute vos modifications n'oubliez pas d'ajouter un message significatif de vos modification par convention pas plus d'une ligne et en anglais eg : "Add reporting of week 3", et l'action de `Push` enverras directement vos modification sur le repository distant sur GitHub.
 
 <figure style="text-align: center;">
-  <img src="/docs/annex/images/commit_and_push.png"  width="400">
+  <img src="/annex/images/commit_and_push.png"  width="400">
   <figcaption> Commit des modifications </figcaption>
 </figure>
 
