@@ -12,128 +12,49 @@ slide-level: 2
 header-includes:
   - \metroset{sectionpage=progressbar}
 ---
- Communication reseau 
-Lire en temps réel les données de capteurs (température, humidité, CO₂…) dans une serre.
+# 🚀 Mise à jour du Projet - Semaine 2
 
+## 🗓️ Bilan de la Semaine
 
-Afficher ces données sur une page web accessible depuis le réseau local et à distance.
+Cette semaine, l'accent a été mis sur la **finalisation de l'architecture** du système et l'intégration des premiers capteurs.
 
+* **Avancée majeure :** Mise en place du schéma de base de données pour la collecte des données de température et d'humidité.
+* **Tâches accomplies :**
+    * Câblage initial des modules de contrôle.
+    * Tests de communication I2C avec le capteur DHT22.
+    * Rédaction des premières ébauches du code de lecture des capteurs.
 
-Permettre à terme le contrôle des actionneurs (ventilateurs, pompes, éclairage) pour automatiser la serre.
+## 🌡️ Section 1 : Intégration du Capteur de Température
 
+Le capteur de température/humidité (DHT22) a été connecté et testé avec succès.
 
+### Schéma de Câblage
 
- Matériel utilisé
-Matériel
-Description / Modèle
-Raspberry Pi 3 Model B
-1 Go, serveur pour collecter les données et héberger la page web
-Arduino Metro Adafruit
-Capteur TMP235 connecté à A2 (lecture analogique)
-TMP235
-Capteur de température analogique
-Câbles USB
-Liaison Arduino ↔ Raspberry Pi
-Connexion Internet
-Pour accès distant (4G/5G)
-Modem Bbox
-Pour redirection de port NAT et accès à distance
+Voici le schéma de connexion utilisé sur la carte de contrôle.
 
+[Image du schéma de câblage]
 
-Principe de fonctionnement 
-L’Arduino lit la température du TMP235 → génère des données JSON sur le port série.
+**Code Snippet :** La lecture est effectuée toutes les 30 secondes pour une économie d'énergie.
 
+### Résultat du Test Initial
 
-Le Raspberry Pi récupère les données via USB.
+Les premiers résultats montrent une lecture stable après étalonnage.
 
+[Image du graphique des données initiales]
 
-Un script Python avec Flask crée un serveur web et affiche les données en temps réel.
+## 💡 Section 2 : Architecture Logicielle
 
+Le diagramme ci-dessous illustre l'architecture logicielle proposée pour la gestion des données (lecture, stockage, envoi au cloud).
 
-Le serveur Flask est accessible :
+[Image du diagramme d'architecture]
 
+**Points Clés :**
+1.  **Module de lecture :** Responsable de l'interrogation périodique des capteurs.
+2.  **Module de stockage :** Utilisation d'une mémoire locale (SD Card) comme cache.
+3.  **Module de communication :** Envoi des données via MQTT au serveur distant.
 
-Sur le réseau local via Wi-Fi
+## 🚧 Prochaines Étapes (Semaine 3)
 
-
-À distance via Port Forwarding sur le modem Bbox
-
-
-
- Étapes réalisées
-a) Lecture du capteur TMP235
-Arduino lit la valeur analogique sur A2.
-
-
-Conversion en tension et calcul de la température en °C.
-
-
-Envoi des données JSON sur le port série (USB vers Raspberry Pi).
-
-
-Exemple de sortie :
-{"temperature": 23.80}
-
-Remarque : la formule de conversion TMP235 a été corrigée pour correspondre à la vraie température (Vout - 0.25) / 0.01.
-
-b) Mise en place du serveur web sur Raspberry Pi
-Installation de Python 3, Flask et pyserial.
-
-
-Script Python pour lire le port série et afficher la température dans une page HTML simple.
-
-
-Page rafraîchie toutes les secondes pour un affichage en temps réel.
-
-
-
-c) Accès depuis le réseau local
-Vérification de l’IP locale du Raspberry Pi.
-
-
-Accès depuis PC ou téléphone sur le réseau Wi-Fi via :
-
-
-http://192.168.x.x:5000
-
-
-d) Accès à distance via Port Forwarding
-Configuration de la Bbox : Redirection du port 5000 vers l’IP locale du Pi.
-
-
-Vérification de l’IP publique.
-
-
-Accès externe depuis un smartphone 4G :
-
-
-http://IP_PUBLIQUE:5000
-
-
-e) (Optionnel) Sécurité et extensions futures
-Ajout futur de Cloudflare Tunnel ou HTTPS pour sécuriser l’accès externe.
-
-
-Possibilité d’intégrer d’autres capteurs et actionneurs.
-
-
-Création d’un tableau de bord interactif avec graphiques temps réel.
-
-
-
- Résultat obtenu
-Le Raspberry Pi récupère et affiche la température du TMP235 sur une page web.
-
-
-La page est accessible localement et depuis Internet via Port Forwarding.
-
-
-Les données sont affichées en JSON et converties en °C.
-
-
-Le système fonctionne en temps réel et peut être étendu à d’autres capteurs et actionneurs.
-
-
-
- Conclusion
-Le projet montre la mise en réseau d’un microcontrôleur (Arduino) et d’un mini-ordinateur (Raspberry Pi).
+* Intégration du module de contrôle des actionneurs (pompe et ventilateur).
+* Développement de la logique de contrôle de base (Seuil de température).
+* Début de l'interface utilisateur web.
