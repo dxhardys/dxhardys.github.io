@@ -32,7 +32,6 @@ Plusieurs pièces composent l'armature de la serre (la partie centrale), des con
   <img src="/sofiane/images/top_corner_piece.png" style="width: 30%;">
   <img src="/sofiane/images/tube_threaded.png" style="width: 30%;">
   <figcaption> Modèles 3D Pièces de base </figcaption>
-
 </div>
 
 
